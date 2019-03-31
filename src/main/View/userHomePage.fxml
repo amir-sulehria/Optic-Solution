@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.Glow?>
+<AnchorPane prefHeight="500.0" prefWidth="800.0" stylesheets="@../resources/css/userPage.css" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller.UserHomePage">
+   <children>
+       <Label fx:id="label" alignment="CENTER" layoutY="14.0" prefHeight="100.0" prefWidth="1000.0" text="User Home Page" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+           <effect>
+               <Glow level="1.0" />
+           </effect>
+       </Label>
+
+       <fx:define>
+       <String fx:id="updateOrderText" fx:value="Update&#xD;Order"/>
+       </fx:define>
+       <fx:define>
+       <String fx:id="updateProfileText" fx:value="Update&#xD;Profile"/>
+       </fx:define>
+       <fx:define>
+       <String fx:id="addOrderText" fx:value="Add&#xD;Order"/>
+       </fx:define>
+       <fx:define>
+       <String fx:id="logOutText" fx:value="Sign&#xD;Out"/>
+       </fx:define>
+       <fx:define>
+       <String fx:id="orderDetailsText" fx:value="Order&#xD;Details"/>
+       </fx:define>
+       <fx:define>
+       <String fx:id="customerDetailsText" fx:value="Customer&#xD;Details"/>
+       </fx:define>
+
+       <Button layoutX="14.0" layoutY="145.0" mnemonicParsing="false" text="$addOrderText" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="140" />
+       <Button layoutX="457.0" layoutY="145.0" mnemonicParsing="false" text="$updateOrderText" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="280.0" AnchorPane.topAnchor="140" />
+       <Button layoutX="236.0" layoutY="145.0" mnemonicParsing="false" text="$orderDetailsText" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="140" />
+
+       <Button layoutX="133.0" layoutY="257.0" mnemonicParsing="false" text="$updateProfileText" AnchorPane.leftAnchor="50.0" AnchorPane.topAnchor="260" />
+       <Button layoutX="349.0" layoutY="257.0" mnemonicParsing="false" text="$customerDetailsText" AnchorPane.leftAnchor="280.0" AnchorPane.rightAnchor="280" AnchorPane.topAnchor="260" />
+       <Button layoutX="349.0" layoutY="257.0" mnemonicParsing="false" text="$logOutText" AnchorPane.rightAnchor="50" AnchorPane.topAnchor="260" />
+
+       <Button fx:id="goBackBtn" onAction="#goToMainScreen" underline="true" alignment="CENTER" layoutX="349.0" layoutY="14.0" text="Go Back to main screen" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.bottomAnchor="50.0" />
+
+
+   </children>
+</AnchorPane>

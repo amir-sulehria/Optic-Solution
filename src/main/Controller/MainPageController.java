@@ -1,35 +1,51 @@
 package main.Controller;
 
 import javafx.fxml.FXML;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.fxml.FXMLLoader;
-import javafx.stage.Modality;
+import javafx.scene.Parent;
+import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import main.Common;
+
 import java.io.IOException;
 
-public class MainPageController{
+public class MainPageController {
 
-    public void btnClick(){
+    @FXML
+    private Button tryLogin;
+
+    @FXML
+    public void btnClick() {
         System.out.println("You clicked button");
     }
 
     @FXML
-    public void forgetPassword(){
-        loadStage("/main/View/forgetPassword.fxml");
-    }
+    public void forgetPassword() {
 
-
-
-    private void loadStage(String fxml) {
         try {
-            Parent root = FXMLLoader.load(getClass().getResource(fxml));
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.initModality(Modality.APPLICATION_MODAL);
-            stage.show();
+            Parent root = FXMLLoader.load(getClass().getResource("/main/View/forgetPassword.fxml"));
+            Common.loadStage(root, "Recover Password");
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
+
+    @FXML
+    public void signIn() {
+
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("/main/View/userHomePage.fxml"));
+            Common.loadStage(root, "User Home");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        Stage stage = (Stage) tryLogin.getScene().getWindow();
+        stage.close();
+    }
+
 }
+
+
+

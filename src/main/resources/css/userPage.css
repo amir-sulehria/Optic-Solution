@@ -1,0 +1,36 @@
+.root{
+    -fx-background-image: url("../imgs/backg.jpeg");
+    -fx-font-family: "Segoe UI Emoji";
+    -fx-font-size: 20;
+}
+
+
+#label{
+    -fx-font-size: 40;
+}
+
+.button:hover{
+    -fx-background-color: #2695ef;
+    -fx-scale-y: 1.1;
+}
+
+.button{
+    -fx-text-alignment: center;
+    -fx-background-color: white;
+    -fx-pref-height: 100;
+    -fx-pref-width: 200;
+    -fx-background-radius: 3em;
+}
+
+#goBackBtn{
+
+    -fx-font-family: "Segoe UI";
+    -fx-font-weight: bold;
+    -fx-background-color: none;
+    -fx-text-fill: red;
+    -fx-pref-height: 50;
+    -fx-pref-width: 100;
+    -fx-background-radius: 3em;
+
+}
+
