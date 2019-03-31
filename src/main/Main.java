@@ -13,7 +13,6 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("View/mainPage.fxml"));
-        //forgotPassScene = FXMLLoader.load(getClass().getResource("View/forgetPassword.fxml"));
 
 
         primaryStage.setTitle("Optic Solutions");
@@ -21,7 +20,7 @@ public class Main extends Application {
         primaryStage.show();
         primaryStage.setMinWidth(primaryStage.getWidth());
         primaryStage.setMinHeight(primaryStage.getHeight());
-        primaryStage.setMaxHeight(primaryStage.getWidth());
+        primaryStage.setMaxWidth(primaryStage.getWidth());
         primaryStage.setMaxHeight(primaryStage.getHeight());
     }
 

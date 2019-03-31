@@ -1,0 +1,7 @@
+.button:hover{
+    -fx-background-color: white;
+    -fx-scale-y: 1.1;
+}
+.root{
+    -fx-font-family: "Segoe UI Emoji";
+}
