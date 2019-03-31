@@ -21,7 +21,7 @@
 
       <PasswordField fx:id="tryPass" layoutX="686.0" layoutY="198.0" prefHeight="66.0" prefWidth="300.0" promptText="Password" AnchorPane.leftAnchor="686.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="198.0" />
 
-      <Button fx:id="tryLogin" layoutX="844.0" layoutY="308.0" mnemonicParsing="false" onAction="#btnClick" text="Sign In" AnchorPane.rightAnchor="14.0">
+      <Button fx:id="tryLogin" layoutX="844.0" layoutY="308.0" mnemonicParsing="false" onAction="#signIn" text="Sign In" AnchorPane.rightAnchor="14.0">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -55,7 +55,7 @@
          </font>
       </Label>
 
-      <Button fx:id="signUp" layoutX="892.0" layoutY="387.0" mnemonicParsing="false" onAction="#btnClick" style="-fx-background-color: #454447;" text="Click Here" textFill="WHITE" underline="true" AnchorPane.bottomAnchor="82.0" AnchorPane.leftAnchor="892.0" AnchorPane.rightAnchor="14.0">
+      <Button layoutX="892.0" layoutY="387.0" mnemonicParsing="false" onAction="#forgetPassword" style="-fx-background-color: #454447;" text="Click Here" textFill="WHITE" underline="true" AnchorPane.bottomAnchor="82.0" AnchorPane.leftAnchor="892.0" AnchorPane.rightAnchor="14.0">
          <font>
             <Font name="Segoe UI Emoji" size="16.0" />
          </font>

@@ -8,12 +8,20 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
+    Scene mainScene, forgotPassScene;
+
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("View/mainPage.fxml"));
+
+
         primaryStage.setTitle("Optic Solutions");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
+        primaryStage.setMinWidth(primaryStage.getWidth());
+        primaryStage.setMinHeight(primaryStage.getHeight());
+        primaryStage.setMaxWidth(primaryStage.getWidth());
+        primaryStage.setMaxHeight(primaryStage.getHeight());
     }
 
 
