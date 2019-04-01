@@ -7,6 +7,7 @@ create table tbl_supplier (
 	su_contactnumber int default 0,
 	su_streetaddress varchar(255),
 	su_cityaddress varchar(255),
+	su_charges int check(su_charges >= 0),
 )
 
 create table tbl_manufacturer (
