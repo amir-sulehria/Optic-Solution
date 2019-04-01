@@ -23,7 +23,8 @@ create table tbl_employee (
 	e_uname varchar(255),
 	e_fname varchar(255),
 	e_lname varchar(255),
-	e_type varchar(255),
+	e_password varchar(255), 
+	e_type varchar(255), --ADMIN / USER
 	e_datestart DATE default getDate(),
 	e_contactnumber int default 0,
 	e_street_address varchar(255) default 'Undefined',
