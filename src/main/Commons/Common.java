@@ -1,4 +1,4 @@
-package main;
+package main.Commons;
 
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -14,10 +14,10 @@ public class Common {
         stage.setScene(new Scene(root));
         stage.initModality(Modality.APPLICATION_MODAL);
         stage.show();
-        stage.setMinWidth(stage.getWidth());
-        stage.setMinHeight(stage.getHeight());
-        stage.setMaxWidth(stage.getWidth());
-        stage.setMaxHeight(stage.getHeight());
+//        stage.setMinWidth(stage.getWidth());
+//        stage.setMinHeight(stage.getHeight());
+//        stage.setMaxWidth(stage.getWidth());
+//        stage.setMaxHeight(stage.getHeight());
 
     }
 

@@ -32,7 +32,7 @@
 
 
 
-      <RadioButton layoutX="686.0" layoutY="280.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="120.0" text="Admin" textFill="WHITE" AnchorPane.leftAnchor="686.0" AnchorPane.rightAnchor="194.0">
+      <RadioButton fx:id="admin" layoutX="686.0" layoutY="280.0" mnemonicParsing="false" prefHeight="55.0" prefWidth="120.0" text="Admin" textFill="WHITE" AnchorPane.leftAnchor="686.0" AnchorPane.rightAnchor="194.0">
          <font>
             <Font name="Segoe UI Emoji" size="18.0" />
          </font>
@@ -41,7 +41,7 @@
          </toggleGroup>
       </RadioButton>
 
-      <RadioButton layoutX="686.0" layoutY="335.0" mnemonicParsing="false" selected="true" text="User" textFill="WHITE" toggleGroup="$selectUser" AnchorPane.leftAnchor="686.0" AnchorPane.rightAnchor="246.0">
+      <RadioButton fx:id="user" layoutX="686.0" layoutY="335.0" mnemonicParsing="false" selected="true" text="User" textFill="WHITE" toggleGroup="$selectUser" AnchorPane.leftAnchor="686.0" AnchorPane.rightAnchor="246.0">
          <font>
             <Font name="Segoe UI Emoji" size="18.0" />
          </font>

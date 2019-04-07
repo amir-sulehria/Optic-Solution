@@ -16,7 +16,7 @@
 
 .button{
     -fx-text-alignment: center;
-    -fx-background-color: white;
+    -fx-background-color:  #e3ecf9;
     -fx-pref-height: 100;
     -fx-pref-width: 200;
     -fx-background-radius: 3em;

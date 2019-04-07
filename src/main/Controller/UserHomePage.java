@@ -5,7 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-import main.Common;
+import main.Commons.Common;
 
 import java.io.IOException;
 

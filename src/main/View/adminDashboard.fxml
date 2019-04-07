@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<!--<AnchorPane prefHeight="700" prefWidth="1080" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller.AdminDashboard">-->
+<!--<children>-->
+<!--<Button mnemonicParsing="false" text="Button" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />-->
+<!--<HBox prefHeight="100.0" prefWidth="150.0" style="-fx-background-color: black" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />-->
+<!--<VBox layoutY="227.0" prefHeight="500.0" prefWidth="150.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="100.0" />-->
+<!--<VBox layoutY="47.0" prefHeight="400.0" prefWidth="150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" />-->
+<!--</children>-->
+<!--</AnchorPane>-->
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller.AdminDashboard" stylesheets="@../resources/css/common.css">
+
+   <left>
+      <VBox prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: #454447;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label text="Hey, Steve" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Emoji" size="25.0" />
+                     </font>
+                     <padding>
+                        <Insets left="10.0" top="10.0" />
+                     </padding>
+                  </Label>
+               </children>
+            </HBox>
+            <VBox prefHeight="500.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #297cb8;" text="Dashboard" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Emoji" size="30.0" />
+                     </font></Button>
+                  <Separator prefWidth="200.0" />
+                  <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #297cb8;" text="Orders" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Emoji" size="30.0" />
+                     </font></Button>
+                  <Separator prefWidth="200.0" />
+                  <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #297cb8;" text="Products" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Emoji" size="30.0" />
+                     </font></Button>
+                  <Separator prefWidth="200.0" />
+                  <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #297cb8;" text="Employers" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Emoji" size="30.0" />
+                     </font></Button>
+                  <Separator prefWidth="200.0" style="-fx-background-color: #000000;" />
+                  <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #297cb8;" text="Suppliers" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Emoji" size="30.0" />
+                     </font></Button>
+                  <Separator prefWidth="200.0" />
+                  <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #297cb8;" text="Log Out" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Emoji" size="30.0" />
+                     </font></Button>
+               </children>
+            </VBox>
+         </children></VBox>
+   </left>
+   <center>
+
+   </center>
+
+   <center>
+
+   </center>
+   <center>
+      <AnchorPane prefHeight="600.0" prefWidth="650.0" style="-fx-background-color: #e3ecf9;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="304.0" layoutY="14.0" minHeight="100.0" prefWidth="100.0" text="Admin Dashboard" textFill="#2a7db8" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <font>
+                  <Font name="Segoe UI Black" size="30.0" />
+               </font>
+               <effect>
+                  <Glow level="0.47" />
+               </effect>
+            </Label>
+            <Separator layoutX="318.0" layoutY="99.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

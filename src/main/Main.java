@@ -18,10 +18,10 @@ public class Main extends Application {
         primaryStage.setTitle("Optic Solutions");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
-        primaryStage.setMinWidth(primaryStage.getWidth());
-        primaryStage.setMinHeight(primaryStage.getHeight());
-        primaryStage.setMaxWidth(primaryStage.getWidth());
-        primaryStage.setMaxHeight(primaryStage.getHeight());
+//        primaryStage.setMinWidth(primaryStage.getWidth());
+//        primaryStage.setMinHeight(primaryStage.getHeight());
+//        primaryStage.setMaxWidth(primaryStage.getWidth());
+//        primaryStage.setMaxHeight(primaryStage.getHeight());
     }
 
 
