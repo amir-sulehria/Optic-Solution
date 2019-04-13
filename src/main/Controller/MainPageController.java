@@ -27,7 +27,7 @@ public class MainPageController {
 
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/main/View/forgetPassword.fxml"));
-            Common.loadStage(root, "Recover Password");
+            Common.loadStage(root, "Recover Password", true);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -41,12 +41,11 @@ public class MainPageController {
         Parent root;
         try {
             if(selectedBtn == user.getText()){
-                System.out.printf("You enterd user");
                 root = FXMLLoader.load(getClass().getResource("/main/View/userHomePage.fxml"));
-                Common.loadStage(root, "Dashboard");
+                Common.loadStage(root, "Dashboard", true);
             }else if(selectedBtn == admin.getText()){
                 root = FXMLLoader.load(getClass().getResource("/main/View/adminDashboard.fxml"));
-                Common.loadStage(root, "Dashboard");
+                Common.loadStage(root, "Dashboard", false);
             }
         } catch (IOException e) {
             e.printStackTrace();

@@ -20,7 +20,7 @@ public class UserHomePage {
 
         try {
             Parent root = FXMLLoader.load(getClass().getResource("/main/View/mainPage.fxml"));
-            Common.loadStage(root, "Optical Solutions");
+            Common.loadStage(root, "Optical Solutions", false);
         }catch (IOException e){
             e.printStackTrace();
         }
