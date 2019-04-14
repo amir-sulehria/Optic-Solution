@@ -1,10 +1,17 @@
 create database OPTIC_SOLUTIONS
 
+create table tbl_phone (
+	ph_id int primary key,
+	ph_no int NULL,
+	ph_user_designation varchar(255),
+)
+
+
 create table tbl_supplier (
 	su_id int primary key,
 	su_fname varchar(255) default 'Unregistered',
 	su_lname varchar(255) default 'Supplier',
-	su_contactnumber int default 0,
+	su_contactnumber int constraint FK_EmployeePhone FOREIGN KEY (su_contactnumber) REFERENCES tbl_phone(ph_id),
 	su_streetaddress varchar(255),
 	su_cityaddress varchar(255),
 	su_charges int check(su_charges >= 0),
@@ -14,7 +21,7 @@ create table tbl_manufacturer (
 	ma_id int primary key,
 	ma_fname varchar(255) default 'Unregistered',
 	ma_lname varchar(255) default 'Manufacturer',
-	ma_contactnumber int default 0,
+	ma_contactnumber int constraint FK_EmployeePhone FOREIGN KEY (ma_contactnumber) REFERENCES tbl_phone(ph_id),
 	ma_streetaddress varchar(255),
 	ma_cityaddress varchar(255),
 )
@@ -27,7 +34,7 @@ create table tbl_employee (
 	e_password varchar(255), 
 	e_type varchar(255), --ADMIN / USER
 	e_datestart DATE default getDate(),
-	e_contactnumber int default 0,
+	e_contactnumber int constraint FK_EmployeePhone FOREIGN KEY (e_contactnumber) REFERENCES tbl_phone(ph_id),
 	e_street_address varchar(255) default 'Undefined',
 	e_city_address varchar(255) default 'Undefined',
 	e_base_salary int,
@@ -40,7 +47,7 @@ create table tbl_doctor (
 	d_fname varchar(255),
 	d_lname varchar(255),
 	d_datestart DATE default getDate(),
-	d_contactnumber int default 0,
+	d_contactnumber int constraint FK_DoctorPhone FOREIGN KEY (d_contactnumber) REFERENCES tbl_phone(ph_id),
 	d_street_address varchar(255) default 'Undefined',
 	d_city_address varchar(255) default 'Undefined',
 	e_base_salary int,
@@ -159,6 +166,7 @@ create table tbl_purchase (
 	emp_id int CONSTRAINT FK_PurchaseEmployee FOREIGN KEY (c_id) REFERENCES tbl_employee(e_id), --foreign key
 	payment_status varchar(255) default 'Undefined',
 	purchase_status varchar(255) default 'Undefined',
+	purchase_type varchar(255) default 'purchase',
 	payment_completion_date DATE default getDate(),
 	purchase_completion_date DATE default getDate()
 )
