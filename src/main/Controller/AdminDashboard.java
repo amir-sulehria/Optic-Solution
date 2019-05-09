@@ -12,6 +12,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import main.Commons.Common;
+import main.Model.Employee;
 
 import java.io.IOException;
 
@@ -98,6 +99,7 @@ public class AdminDashboard {
     public void openEmployee(){
         try {
             AnchorPane center = FXMLLoader.load(getClass().getResource("/main/View/employeeDashboard.fxml"));
+
             setCenter(center);
 
         } catch (IOException e) {
