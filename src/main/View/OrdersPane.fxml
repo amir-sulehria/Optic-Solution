@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="ordersPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #e3ecf9;" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller.AdminDashboard">
+<AnchorPane fx:id="ordersPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #e3ecf9;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller.OrderController">
 
     <children>
 
-        <Label alignment="CENTER" layoutX="304.0" layoutY="14.0" prefHeight="100.0" prefWidth="100.0" text="Admin Dashboard" textFill="#2a7db8" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <Label alignment="CENTER" layoutX="304.0" layoutY="14.0" prefHeight="50.0" prefWidth="100.0" text="Admin Dashboard" textFill="#2a7db8" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <font>
                 <Font name="Segoe UI Black" size="30.0" />
             </font>
@@ -24,11 +29,11 @@
             </effect>
         </Label>
 
-        <Separator layoutX="318.0" layoutY="99.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
+        <Separator layoutX="318.0" layoutY="99.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0" />
 
-        <HBox layoutX="225.0" layoutY="103.0" prefHeight="100.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0">
+        <HBox layoutX="225.0" layoutY="103.0" prefHeight="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
          <children>
-            <Label prefHeight="50.0" prefWidth="200.0" text="Enter Order No: ">
+            <Label prefHeight="50.0" prefWidth="140.0" text="Search By ">
                <font>
                   <Font name="Segoe UI Emoji" size="25.0" />
                </font>
@@ -36,27 +41,64 @@
                   <Insets left="10.0" />
                </padding>
             </Label>
-            <TextField prefHeight="50.0" prefWidth="250.0">
+
+            <ChoiceBox fx:id="searchBy" prefHeight="50.0" prefWidth="110.0" value="Order No.">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Order No." />
+                        <String fx:value="Customer Name" />
+                        <String fx:value="Employee Name" />
+                    </FXCollections>
+                </items>
+            </ChoiceBox>
+
+             <TextField prefHeight="50.0" prefWidth="300.0">
                 <font>
                     <Font name="Segoe UI Emoji" size="20.0" />
                 </font>
-            </TextField>
-             <Label prefHeight="50.0" prefWidth="110.0" text="Sort By: ">
-                 <font>
-                     <Font name="Segoe UI Emoji" size="25.0" />
-                 </font>
-                 <padding>
-                     <Insets left="10.0" />
-                 </padding>
-             </Label>
-            <ComboBox prefHeight="50.0" prefWidth="110.0">
                <HBox.margin>
-                  <Insets left="10.0" />
+                  <Insets left="20.0" />
                </HBox.margin>
-            </ComboBox>
+            </TextField>
 
          </children></HBox>
-      <ScrollPane fx:id="employeePane" layoutX="300.0" layoutY="210.0" onMouseClicked="#temp" style="-fx-background-color: #2695ef;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="200.0" />
+      <TableView fx:id="ordersTab" layoutX="300.0" layoutY="213.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="140.0">
+        <columns>
+
+            <TableColumn text="Order_Id">
+            <cellValueFactory><PropertyValueFactory property="p_id" /></cellValueFactory>
+            </TableColumn>
+           <TableColumn text="Customer">
+            <cellValueFactory><PropertyValueFactory property="cust_name" /></cellValueFactory>
+            </TableColumn>
+           <TableColumn text="Dealer">
+            <cellValueFactory><PropertyValueFactory property="emp_name" /></cellValueFactory>
+            </TableColumn>
+           <TableColumn prefWidth="90.0" text="Price">
+            <cellValueFactory><PropertyValueFactory property="price" /></cellValueFactory>
+            </TableColumn>
+           <TableColumn minWidth="8.0" prefWidth="90.0" text="Purch_Status">
+            <cellValueFactory><PropertyValueFactory property="purch_status" /></cellValueFactory>
+            </TableColumn>
+           <TableColumn prefWidth="90.0" text="Purch_Date">
+            <cellValueFactory><PropertyValueFactory property="purch_date" /></cellValueFactory>
+            </TableColumn>
+           <TableColumn prefWidth="90.0" text="Pay_Status">
+            <cellValueFactory><PropertyValueFactory property="pay_status" /></cellValueFactory>
+            </TableColumn>
+           <TableColumn prefWidth="90.0" text="Pay_Date">
+            <cellValueFactory><PropertyValueFactory property="pay_date" /></cellValueFactory>
+            </TableColumn>
+           <TableColumn prefWidth="90.0" text="Purch_Type">
+            <cellValueFactory><PropertyValueFactory property="purch_type" /></cellValueFactory>
+            </TableColumn>
+        </columns>
+      </TableView>
+        <Button alignment="CENTER" layoutX="565.0" layoutY="525.0" mnemonicParsing="false" onAction="#delOrder" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #2695ef;" text="Delete" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+            <font>
+                <Font name="Segoe UI Emoji" size="18.0" />
+            </font>
+        </Button>
 
 
 

@@ -15,11 +15,70 @@ public class EmployeeController {
 
     @FXML
     private TableView<Employee> empTable;
+
     ObservableList<Employee> employees;
+
+
 
 
     public void initialize(){
         employees = FXCollections.observableArrayList();
+        employees.add(new Employee(1, "Ali", 324232, "Admin", "092340234", "Lahore"));
+        employees.add(new Employee(2, "Hamza", 70000));
+        employees.add(new Employee(3, "Hammad", 30000));
+        employees.add(new Employee(4, "Akbar", 55000));
+        employees.add(new Employee(1, "Ali", 324232, "Admin", "092340234", "Lahore"));
+        employees.add(new Employee(2, "Hamza", 70000));
+        employees.add(new Employee(3, "Hammad", 30000));
+        employees.add(new Employee(4, "Akbar", 55000));
+        employees.add(new Employee(1, "Ali", 324232, "Admin", "092340234", "Lahore"));
+        employees.add(new Employee(2, "Hamza", 70000));
+        employees.add(new Employee(3, "Hammad", 30000));
+        employees.add(new Employee(4, "Akbar", 55000));
+        employees.add(new Employee(1, "Ali", 324232, "Admin", "092340234", "Lahore"));
+        employees.add(new Employee(2, "Hamza", 70000));
+        employees.add(new Employee(3, "Hammad", 30000));
+        employees.add(new Employee(4, "Akbar", 55000));
+        employees.add(new Employee(1, "Ali", 324232, "Admin", "092340234", "Lahore"));
+        employees.add(new Employee(2, "Hamza", 70000));
+        employees.add(new Employee(3, "Hammad", 30000));
+        employees.add(new Employee(4, "Akbar", 55000));
+        employees.add(new Employee(1, "Ali", 324232, "Admin", "092340234", "Lahore"));
+        employees.add(new Employee(2, "Hamza", 70000));
+        employees.add(new Employee(3, "Hammad", 30000));
+        employees.add(new Employee(4, "Akbar", 55000));
+        employees.add(new Employee(1, "Ali", 324232, "Admin", "092340234", "Lahore"));
+        employees.add(new Employee(2, "Hamza", 70000));
+        employees.add(new Employee(3, "Hammad", 30000));
+        employees.add(new Employee(4, "Akbar", 55000));
+        employees.add(new Employee(1, "Ali", 324232, "Admin", "092340234", "Lahore"));
+        employees.add(new Employee(2, "Hamza", 70000));
+        employees.add(new Employee(3, "Hammad", 30000));
+        employees.add(new Employee(4, "Akbar", 55000));
+        employees.add(new Employee(1, "Ali", 324232, "Admin", "092340234", "Lahore"));
+        employees.add(new Employee(2, "Hamza", 70000));
+        employees.add(new Employee(3, "Hammad", 30000));
+        employees.add(new Employee(4, "Akbar", 55000));
+        employees.add(new Employee(1, "Ali", 324232, "Admin", "092340234", "Lahore"));
+        employees.add(new Employee(2, "Hamza", 70000));
+        employees.add(new Employee(3, "Hammad", 30000));
+        employees.add(new Employee(4, "Akbar", 55000));
+        employees.add(new Employee(1, "Ali", 324232, "Admin", "092340234", "Lahore"));
+        employees.add(new Employee(2, "Hamza", 70000));
+        employees.add(new Employee(3, "Hammad", 30000));
+        employees.add(new Employee(4, "Akbar", 55000));
+        employees.add(new Employee(1, "Ali", 324232, "Admin", "092340234", "Lahore"));
+        employees.add(new Employee(2, "Hamza", 70000));
+        employees.add(new Employee(3, "Hammad", 30000));
+        employees.add(new Employee(4, "Akbar", 55000));
+        employees.add(new Employee(1, "Ali", 324232, "Admin", "092340234", "Lahore"));
+        employees.add(new Employee(2, "Hamza", 70000));
+        employees.add(new Employee(3, "Hammad", 30000));
+        employees.add(new Employee(4, "Akbar", 55000));
+        employees.add(new Employee(1, "Ali", 324232, "Admin", "092340234", "Lahore"));
+        employees.add(new Employee(2, "Hamza", 70000));
+        employees.add(new Employee(3, "Hammad", 30000));
+        employees.add(new Employee(4, "Akbar", 55000));
         employees.add(new Employee(1, "Ali", 324232, "Admin", "092340234", "Lahore"));
         employees.add(new Employee(2, "Hamza", 70000));
         employees.add(new Employee(3, "Hammad", 30000));

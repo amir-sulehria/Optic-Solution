@@ -31,7 +31,8 @@
             </yAxis>
         </LineChart>
         <PieChart fx:id="popular" layoutX="-6.0" layoutY="291.0" title="Top 5 Sold Products" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="420.0" />
-      <PieChart fx:id="lowStock" layoutX="286.0" layoutY="410.0" title="Low on Stock Products" AnchorPane.leftAnchor="460.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="420.0" />
+      <PieChart fx:id="lowStock" layoutX="286.0" layoutY="410.0" title="Low on Stock Products" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="460.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="420.0" />
+      <Separator layoutX="385.0" layoutY="390.0" orientation="VERTICAL" prefHeight="200.0" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="460.0" AnchorPane.topAnchor="420.0" />
     </children>
 
 </AnchorPane>

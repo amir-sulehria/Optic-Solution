@@ -18,7 +18,7 @@
 
     <children>
 
-        <Label alignment="CENTER" layoutX="304.0" layoutY="14.0" prefHeight="100.0" prefWidth="100.0" text="Admin Dashboard" textFill="#2a7db8" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <Label fx:id="label" alignment="CENTER" layoutX="304.0" layoutY="14.0" minHeight="50.0" prefWidth="100.0" text="Admin Dashboard" textFill="#2a7db8" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <font>
                 <Font name="Segoe UI Black" size="30.0" />
             </font>
@@ -27,9 +27,9 @@
             </effect>
         </Label>
 
-        <Separator layoutX="318.0" layoutY="99.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
+        <Separator layoutX="318.0" layoutY="99.0" prefWidth="800.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0" />
 
-        <HBox layoutX="225.0" layoutY="103.0" prefHeight="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0">
+        <HBox layoutX="225.0" layoutY="103.0" prefHeight="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
             <children>
                 <Label prefHeight="50.0" prefWidth="210.0" text="Employee Name: ">
                     <font>
@@ -60,7 +60,7 @@
 
             </children></HBox>
 
-      <TableView fx:id="empTable" layoutX="300.0" layoutY="272.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="180.0">
+      <TableView fx:id="empTable" layoutX="300.0" layoutY="272.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="130.0">
         <columns>
             <TableColumn fx:id="idCol" prefWidth="100.0" text="Emp_Id">
                 <cellValueFactory><PropertyValueFactory property="id" /></cellValueFactory>
