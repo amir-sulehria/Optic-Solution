@@ -4,6 +4,11 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.chart.LineChart;
+import javafx.scene.chart.NumberAxis;
+import javafx.scene.chart.PieChart;
+import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.ScrollPane;
@@ -15,9 +20,16 @@ import main.Commons.Common;
 import main.Model.Employee;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class AdminDashboard {
+public class AdminDashboard{
 
+
+    @FXML
+    private BorderPane adminPane;
+    @FXML
+    private Label label;
     @FXML
     private ScrollPane employeePane;
     @FXML
@@ -32,24 +44,13 @@ public class AdminDashboard {
     public void openDashboard(){
 
         try {
+
             AnchorPane center = FXMLLoader.load(getClass().getResource("/main/View/dashboardPane.fxml"));
             setCenter(center);
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-    }
-
-    public void temp(){
-        ListView<String> list = new ListView<String>();
-        ObservableList<String> items = FXCollections.observableArrayList(
-                "Single", "Double", "Suite", "Family App","Single", "Double", "Suite", "Family App","Single", "Double", "Suite", "Family App","Single", "Double", "Suite", "Family App");
-        list.setItems(items);
-
-        employeePane.prefWidthProperty().bind(list.widthProperty());
-        employeePane.prefHeightProperty().bind(list.heightProperty());
-        employeePane.setContent(list);
-        employeePane.setVbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
     }
 
     public void openOrders(){
@@ -126,5 +127,18 @@ public class AdminDashboard {
         root.setCenter(center);
 
     }
+
+    @FXML
+    public void initialize(){
+        try {
+
+            AnchorPane center = FXMLLoader.load(getClass().getResource("/main/View/dashboardPane.fxml"));
+            adminPane.setCenter(center);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
 
 }

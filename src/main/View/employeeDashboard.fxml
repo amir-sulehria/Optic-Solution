@@ -59,11 +59,8 @@
                 </ComboBox>
 
             </children></HBox>
-        <Button alignment="CENTER" layoutX="565.0" layoutY="525.0" mnemonicParsing="false" onAction="#addEmployer" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #2695ef;" text="Add New Employer" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
-            <font>
-                <Font name="Segoe UI Emoji" size="18.0" />
-            </font></Button>
-      <TableView fx:id="employeeTable" items="${controller.employees}" layoutX="300.0" layoutY="272.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="180.0">
+
+      <TableView fx:id="empTable" layoutX="300.0" layoutY="272.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="180.0">
         <columns>
             <TableColumn fx:id="idCol" prefWidth="100.0" text="Emp_Id">
                 <cellValueFactory><PropertyValueFactory property="id" /></cellValueFactory>
@@ -85,7 +82,17 @@
             </TableColumn>
         </columns>
       </TableView>
-      <Button alignment="CENTER" layoutX="358.0" layoutY="540.0" mnemonicParsing="false" onAction="#delEmployee" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #2695ef;" text="Delete Employee" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="220.0">
+      <Button alignment="CENTER" layoutX="565.0" layoutY="525.0" mnemonicParsing="false" onAction="#addEmployer" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #2695ef;" text="Add" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+          <font>
+              <Font name="Segoe UI Emoji" size="18.0" />
+          </font>
+      </Button>
+      <Button alignment="CENTER" layoutX="358.0" layoutY="540.0" mnemonicParsing="false" onAction="#delEmployee" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #2695ef;" text="Delete" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="120.0">
+         <font>
+            <Font name="Segoe UI Emoji" size="18.0" />
+         </font>
+      </Button>
+      <Button alignment="CENTER" layoutX="168.0" layoutY="540.0" mnemonicParsing="false" onAction="#updateEmployee" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #2695ef;" text="Update" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="230.0">
          <font>
             <Font name="Segoe UI Emoji" size="18.0" />
          </font>

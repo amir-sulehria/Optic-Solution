@@ -1,18 +1,19 @@
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.effect.Glow?>
-<?import javafx.scene.control.Separator?>
-<?import javafx.scene.chart.LineChart?>
-<?import javafx.scene.chart.CategoryAxis?>
-<?import javafx.scene.chart.NumberAxis?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
-            fx:id="dashboardPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #e3ecf9;"
-            fx:controller="main.Controller.AdminDashboard">
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="dashboardPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #e3ecf9;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller.DashboardController">
 
     <children>
-        <Label alignment="CENTER" layoutX="304.0" layoutY="14.0" minHeight="100.0" prefWidth="100.0" text="Admin Dashboard" textFill="#2a7db8" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <Label fx:id="label" alignment="CENTER" layoutX="304.0" layoutY="14.0" minHeight="50.0" prefWidth="100.0" text="Admin Dashboard" textFill="#2a7db8" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <font>
                 <Font name="Segoe UI Black" size="30.0" />
             </font>
@@ -20,15 +21,17 @@
                 <Glow level="0.47" />
             </effect>
         </Label>
-        <Separator layoutX="318.0" layoutY="99.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0" />
-        <LineChart layoutX="75.0" layoutY="100.0" prefHeight="350.0" prefWidth="650.0" title="Current Month Sales" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0">
+        <Separator layoutX="318.0" layoutY="99.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+        <LineChart fx:id="lineChart" layoutX="75.0" layoutY="100.0" prefHeight="350.0" prefWidth="650.0" title="Current Month Sales" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="60.0">
             <xAxis>
-                <CategoryAxis side="BOTTOM" />
+                <CategoryAxis label="Sale" side="BOTTOM" />
             </xAxis>
             <yAxis>
-                <NumberAxis side="LEFT" />
+                <NumberAxis label="Month" side="LEFT" />
             </yAxis>
         </LineChart>
+        <PieChart fx:id="popular" layoutX="-6.0" layoutY="291.0" title="Top 5 Sold Products" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="420.0" />
+      <PieChart fx:id="lowStock" layoutX="286.0" layoutY="410.0" title="Low on Stock Products" AnchorPane.leftAnchor="460.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="420.0" />
     </children>
 
 </AnchorPane>

@@ -4,6 +4,7 @@
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.LineChart?>
 <?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
@@ -14,9 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane prefHeight="600" prefWidth="1000" stylesheets="@../resources/css/common.css"
-            xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="main.Controller.AdminDashboard">
+<BorderPane fx:id="adminPane" prefHeight="600" prefWidth="1000" stylesheets="@../resources/css/common.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller.AdminDashboard">
 
     <left>
         <VBox prefHeight="600.0" prefWidth="200.0" style="-fx-background-color: #454447;" BorderPane.alignment="CENTER">
@@ -25,62 +24,55 @@
                     <children>
                         <Label fx:id="adminName" text="Hey, Steve" textFill="WHITE">
                             <font>
-                                <Font name="Segoe UI Emoji" size="25.0"/>
+                                <Font name="Segoe UI Emoji" size="25.0" />
                             </font>
                             <padding>
-                                <Insets left="10.0" top="10.0"/>
+                                <Insets left="10.0" top="10.0" />
                             </padding>
                         </Label>
                     </children>
                 </HBox>
                 <VBox prefHeight="500.0" prefWidth="200.0">
                     <children>
-                        <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="200.0" onAction="#openDashboard"
-                                style="-fx-background-color: #297cb8;" text="Dashboard" textFill="WHITE">
+                        <Button mnemonicParsing="false" onAction="#openDashboard" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #297cb8;" text="Dashboard" textFill="WHITE">
                             <font>
-                                <Font name="Segoe UI Emoji" size="30.0"/>
+                                <Font name="Segoe UI Emoji" size="30.0" />
                             </font>
                         </Button>
-                        <Separator prefWidth="200.0"/>
-                        <Button onAction="#openOrders" mnemonicParsing="false" prefHeight="100.0" prefWidth="200.0"
-                                style="-fx-background-color: #297cb8;" text="Orders" textFill="WHITE">
+                        <Separator prefWidth="200.0" />
+                        <Button mnemonicParsing="false" onAction="#openOrders" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #297cb8;" text="Orders" textFill="WHITE">
                             <font>
-                                <Font name="Segoe UI Emoji" size="30.0"/>
+                                <Font name="Segoe UI Emoji" size="30.0" />
                             </font>
                         </Button>
-                        <Separator prefWidth="200.0"/>
-                        <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="200.0" onAction="#openProducts"
-                                style="-fx-background-color: #297cb8;" text="Products" textFill="WHITE">
+                        <Separator prefWidth="200.0" />
+                        <Button mnemonicParsing="false" onAction="#openProducts" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #297cb8;" text="Products" textFill="WHITE">
                             <font>
-                                <Font name="Segoe UI Emoji" size="30.0"/>
+                                <Font name="Segoe UI Emoji" size="30.0" />
                             </font>
                         </Button>
-                        <Separator prefWidth="200.0"/>
-                        <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="200.0" onAction="#openCustomer"
-                                style="-fx-background-color: #297cb8;" text="Customers" textFill="WHITE">
+                        <Separator prefWidth="200.0" />
+                        <Button mnemonicParsing="false" onAction="#openCustomer" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #297cb8;" text="Customers" textFill="WHITE">
                             <font>
-                                <Font name="Segoe UI Emoji" size="30.0"/>
+                                <Font name="Segoe UI Emoji" size="30.0" />
                             </font>
                         </Button>
-                        <Separator prefWidth="200.0"/>
-                        <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="200.0" onAction="#openEmployee"
-                                style="-fx-background-color: #297cb8;" text="Employees" textFill="WHITE">
+                        <Separator prefWidth="200.0" />
+                        <Button mnemonicParsing="false" onAction="#openEmployee" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #297cb8;" text="Employees" textFill="WHITE">
                             <font>
-                                <Font name="Segoe UI Emoji" size="30.0"/>
+                                <Font name="Segoe UI Emoji" size="30.0" />
                             </font>
                         </Button>
-                        <Separator prefWidth="200.0" style="-fx-background-color: #000000;"/>
-                        <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="200.0"
-                                style="-fx-background-color: #297cb8;" text="Suppliers" textFill="WHITE" onAction="#openSupplier">
+                        <Separator prefWidth="200.0" style="-fx-background-color: #000000;" />
+                        <Button mnemonicParsing="false" onAction="#openSupplier" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #297cb8;" text="Suppliers" textFill="WHITE">
                             <font>
-                                <Font name="Segoe UI Emoji" size="30.0"/>
+                                <Font name="Segoe UI Emoji" size="30.0" />
                             </font>
                         </Button>
-                        <Separator prefWidth="200.0"/>
-                        <Button mnemonicParsing="false" prefHeight="100.0" prefWidth="200.0" onAction="#logOut"
-                                style="-fx-background-color: #297cb8;" text="Log Out" textFill="WHITE">
+                        <Separator prefWidth="200.0" />
+                        <Button mnemonicParsing="false" onAction="#logOut" prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #297cb8;" text="Log Out" textFill="WHITE">
                             <font>
-                                <Font name="Segoe UI Emoji" size="30.0"/>
+                                <Font name="Segoe UI Emoji" size="30.0" />
                             </font>
                         </Button>
                     </children>
@@ -90,35 +82,5 @@
     </left>
 
 
-
-    <center>
-        <AnchorPane fx:id="dashboardPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #e3ecf9;"
-                    BorderPane.alignment="CENTER">
-            <children>
-                <Label alignment="CENTER" layoutX="304.0" layoutY="14.0" minHeight="100.0" prefWidth="100.0"
-                       text="Admin Dashboard" textFill="#2a7db8" AnchorPane.leftAnchor="0.0"
-                       AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                    <font>
-                        <Font name="Segoe UI Black" size="30.0"/>
-                    </font>
-                    <effect>
-                        <Glow level="0.47"/>
-                    </effect>
-                </Label>
-                <Separator layoutX="318.0" layoutY="99.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0"
-                           AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="100.0"/>
-                <LineChart layoutX="75.0" layoutY="100.0" prefHeight="350.0" prefWidth="650.0"
-                           title="Current Month Sales" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
-                           AnchorPane.topAnchor="100.0">
-                    <xAxis>
-                        <CategoryAxis side="BOTTOM"/>
-                    </xAxis>
-                    <yAxis>
-                        <NumberAxis side="LEFT"/>
-                    </yAxis>
-                </LineChart>
-            </children>
-        </AnchorPane>
-    </center>
 
 </BorderPane>
