@@ -1,5 +1,5 @@
 create database OPTIC_SOLUTIONS
-
+use OPTIC_SOLUTIONS
 create table tbl_phone (
 	ph_id int primary key,
 	ph_no int NULL,
@@ -11,7 +11,7 @@ create table tbl_supplier (
 	su_id int primary key,
 	su_fname varchar(255) default 'Unregistered',
 	su_lname varchar(255) default 'Supplier',
-	su_contactnumber int constraint FK_EmployeePhone FOREIGN KEY (su_contactnumber) REFERENCES tbl_phone(ph_id),
+	su_contactnumber int constraint FK_SupplierPhone FOREIGN KEY (su_contactnumber) REFERENCES tbl_phone(ph_id),
 	su_streetaddress varchar(255),
 	su_cityaddress varchar(255),
 	su_charges int check(su_charges >= 0),
@@ -21,7 +21,7 @@ create table tbl_manufacturer (
 	ma_id int primary key,
 	ma_fname varchar(255) default 'Unregistered',
 	ma_lname varchar(255) default 'Manufacturer',
-	ma_contactnumber int constraint FK_EmployeePhone FOREIGN KEY (ma_contactnumber) REFERENCES tbl_phone(ph_id),
+	ma_contactnumber int constraint FK_ManufacturerPhone FOREIGN KEY (ma_contactnumber) REFERENCES tbl_phone(ph_id),
 	ma_streetaddress varchar(255),
 	ma_cityaddress varchar(255),
 )
@@ -37,19 +37,6 @@ create table tbl_employee (
 	e_contactnumber int constraint FK_EmployeePhone FOREIGN KEY (e_contactnumber) REFERENCES tbl_phone(ph_id),
 	e_street_address varchar(255) default 'Undefined',
 	e_city_address varchar(255) default 'Undefined',
-	e_base_salary int,
-	e_bonuses int,
-	e_reductions int
-)
-create table tbl_doctor (
-	d_id int primary key,
-	d_uname varchar(255),
-	d_fname varchar(255),
-	d_lname varchar(255),
-	d_datestart DATE default getDate(),
-	d_contactnumber int constraint FK_DoctorPhone FOREIGN KEY (d_contactnumber) REFERENCES tbl_phone(ph_id),
-	d_street_address varchar(255) default 'Undefined',
-	d_city_address varchar(255) default 'Undefined',
 	e_base_salary int,
 	e_bonuses int,
 	e_reductions int
@@ -134,7 +121,6 @@ create table tbl_frames(
 
 create table tbl_customer(
 	cu_id int primary key,
-	d_id int CONSTRAINT FK_CustomerDoctor FOREIGN KEY (d_id) REFERENCES tbl_doctor(d_id), --foreign key,
 	cu_fname varchar(255) default 'Unregistered',
 	cu_lname varchar(255) default 'user',
 	cu_type varchar(255) default 'purchase',
@@ -179,4 +165,3 @@ create table tbl_product_supplier (
 	c_id int CONSTRAINT FK_ProductSupplierCoating FOREIGN KEY (c_id) REFERENCES tbl_coating(c_id), --foreign key
 	s_id int CONSTRAINT FK_ProductSupplierSupplier FOREIGN KEY (s_id) REFERENCES tbl_supplier(su_id), --foreign key
 )
-

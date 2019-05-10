@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+    <property name="connection.url">jdbc:sqlserver://localhost\MSSQLSERVER:1433;database=OPTIC_SOLUTIONS;integratedSecurity=true</property>
+    <property name="connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+      <mapping class="Entity.TblCoating"/>
+      <mapping class="Entity.TblCustomer"/>
+      <mapping class="Entity.TblEmployee"/>
+      <mapping class="Entity.TblFrames"/>
+      <mapping class="Entity.TblGlass"/>
+      <mapping class="Entity.TblLens"/>
+      <mapping class="Entity.TblManufacturer"/>
+      <mapping class="Entity.TblPhone"/>
+      <mapping class="Entity.TblProductSupplier"/>
+      <mapping class="Entity.TblPurchase"/>
+      <mapping class="Entity.TblSupplier"/>
+      <!-- <property name="connection.username"/> -->
+    <!-- <property name="connection.password"/> -->
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>
