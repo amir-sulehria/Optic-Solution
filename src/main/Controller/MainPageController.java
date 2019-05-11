@@ -42,7 +42,7 @@ public class MainPageController {
         try {
             if(selectedBtn == user.getText()){
                 root = FXMLLoader.load(getClass().getResource("/main/View/userHomePage.fxml"));
-                Common.loadStage(root, "Dashboard", true);
+                Common.loadStage(root, "Dashboard", false);
             }else if(selectedBtn == admin.getText()){
                 root = FXMLLoader.load(getClass().getResource("/main/View/adminDashboard.fxml"));
                 Common.loadStage(root, "Dashboard", false);
