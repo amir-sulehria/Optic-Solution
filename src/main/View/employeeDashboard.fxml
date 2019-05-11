@@ -14,6 +14,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
 <AnchorPane fx:id="ordersPane" prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #e3ecf9;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller.EmployeeController">
 
     <children>
@@ -31,7 +34,7 @@
 
         <HBox layoutX="225.0" layoutY="103.0" prefHeight="50.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="70.0">
             <children>
-                <Label prefHeight="50.0" prefWidth="210.0" text="Employee Name: ">
+                <Label prefHeight="50.0" prefWidth="140.0" text="Search By ">
                     <font>
                         <Font name="Segoe UI Emoji" size="25.0" />
                     </font>
@@ -39,24 +42,25 @@
                         <Insets left="10.0" />
                     </padding>
                 </Label>
-                <TextField prefHeight="50.0" prefWidth="250.0">
+
+                <ChoiceBox fx:id="searchBy" prefHeight="50.0" prefWidth="110.0" value="Emp_Id">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="Emp_Id" />
+                            <String fx:value="Name" />
+                            <String fx:value="City" />
+                        </FXCollections>
+                    </items>
+                </ChoiceBox>
+
+                <TextField prefHeight="50.0" prefWidth="300.0">
                     <font>
                         <Font name="Segoe UI Emoji" size="20.0" />
                     </font>
-                </TextField>
-                <Label prefHeight="50.0" prefWidth="110.0" text="Sort By: ">
-                    <font>
-                        <Font name="Segoe UI Emoji" size="25.0" />
-                    </font>
-                    <padding>
-                        <Insets left="10.0" />
-                    </padding>
-                </Label>
-                <ComboBox prefHeight="50.0" prefWidth="110.0">
                     <HBox.margin>
-                        <Insets left="10.0" />
+                        <Insets left="20.0" />
                     </HBox.margin>
-                </ComboBox>
+                </TextField>
 
             </children></HBox>
 
