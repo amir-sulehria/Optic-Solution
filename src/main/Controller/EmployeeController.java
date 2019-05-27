@@ -4,6 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import main.Commons.Common;
@@ -14,11 +15,9 @@ import java.io.IOException;
 public class EmployeeController {
 
     @FXML
-    private TableView<Employee> empTable;
+    TableView<Employee> empTable;
 
     ObservableList<Employee> employees;
-
-
 
 
     public void initialize(){
@@ -84,8 +83,8 @@ public class EmployeeController {
         employees.add(new Employee(3, "Hammad", 30000));
         employees.add(new Employee(4, "Akbar", 55000));
 
+        System.out.println(empTable);
         empTable.setItems(employees);
-
     }
 
     public void updateEmployee(){
@@ -96,7 +95,7 @@ public class EmployeeController {
 
     public void addEmployer(){
         try {
-            AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("/main/View/addNewEmployer.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("/main/View/addNewEmployer.fxml"));
             Common.loadStage(root, "Add new Employee", true);
         } catch (IOException e) {
             e.printStackTrace();

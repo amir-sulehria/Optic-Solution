@@ -1,5 +1,8 @@
 package main.Controller;
 
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
@@ -7,10 +10,13 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 import main.Commons.Common;
 import main.Model.Employee;
 
 import java.io.IOException;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class AdminDashboard{
 
@@ -29,6 +35,9 @@ public class AdminDashboard{
     private Label adminName;
     @FXML
     private Label orderPane;
+    @FXML
+    private Label dateLabel;
+
 
     public void openDashboard(){
 
@@ -117,8 +126,20 @@ public class AdminDashboard{
 
     }
 
+    private void initClock(){
+        Timeline clock = new Timeline(new KeyFrame(Duration.ZERO, e->{
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss");
+            dateLabel.setText(LocalDateTime.now().format(formatter));
+        }), new KeyFrame(Duration.seconds(1)));
+        clock.setCycleCount(Animation.INDEFINITE);
+        clock.play();
+    }
+
     @FXML
     public void initialize(){
+
+        initClock();
+
         try {
 
             AnchorPane center = FXMLLoader.load(getClass().getResource("/main/View/dashboardPane.fxml"));

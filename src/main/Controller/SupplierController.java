@@ -7,7 +7,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.TableView;
 import main.Commons.Common;
-import main.Model.Employee;
 import main.Model.Supplier;
 
 import java.io.IOException;
